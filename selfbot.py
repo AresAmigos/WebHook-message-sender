@@ -23,4 +23,3 @@ while True:
         os.system('cls')
     else:
         break
-    
