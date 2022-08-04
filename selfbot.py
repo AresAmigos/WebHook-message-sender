@@ -1,5 +1,6 @@
 from discord_webhook import DiscordWebhook
 import os
+from sys import platform as c
 
 weburl = input("Enter your webhook url: ")
 
@@ -20,6 +21,11 @@ while True:
         except:
             print("The file doesn't exist")
     elif a == "cls":
-        os.system('cls')
+        if c == "win32":
+            os.system('cls')
+        elif c == "linux":
+            os.system('clear')
+        else:
+            print("What the fuck operation system do you have? Unix?")
     else:
         break
