@@ -20,12 +20,12 @@ while True:
                 print("The file is too big")
         except:
             print("The file doesn't exist")
-    elif a == "cls":
+    elif a == "cls" or a == "clear":
         if c == "win32":
             os.system('cls')
         elif c == "linux":
             os.system('clear')
         else:
-            print("What the fuck operation system do you have? Unix?")
+            print("What the fuck operation system do you have? Unix? LOL")
     else:
         break
