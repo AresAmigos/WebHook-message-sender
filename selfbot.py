@@ -6,7 +6,7 @@ weburl = input("Enter your webhook url: ")
 
 while True:
     a = input("Message > ")
-    if a != "quit" and a != "break" and a != "exit" and a[:7] != "file > " and a != "cls":
+    if a != "clear" and a != "quit" and a != "break" and a != "exit" and a[:7] != "file > " and a != "cls":
         webhook = DiscordWebhook(url=weburl, content=a)
         webhook.execute()
     elif a[:7] == "file > ":
