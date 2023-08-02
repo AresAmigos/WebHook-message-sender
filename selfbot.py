@@ -11,7 +11,7 @@ while True:
         webhook.execute()
     elif a[:7] == "file > ":
         try:
-            if os.path.getsize(a[7:]) <= 1048576:
+            if os.path.getsize(a[7:]) <= 25 * 1024 * 1024:
                 webhook = DiscordWebhook(url=weburl)
                 with open(a[7:], "rb") as f:
                     webhook.add_file(file=f.read(), filename=a[7:])
