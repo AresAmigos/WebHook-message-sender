@@ -16,7 +16,7 @@ while True:
                 with open(a[7:], "rb") as f:
                     webhook.add_file(file=f.read(), filename=a[7:])
                 webhook.execute()
-            elif os.path.getsize(a[7:]) > 1048576:
+            elif os.path.getsize(a[7:]) > 25 * 1024 * 1024:
                 print("The file is too big")
         except:
             print("The file doesn't exist")
